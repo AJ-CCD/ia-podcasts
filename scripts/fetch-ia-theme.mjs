@@ -1,6 +1,8 @@
 // Downloads the insideadviser.com.au theme stylesheet into styles/ia-theme.css
 // so the podcast site matches the parent site. LiteSpeed renames the combined
 // CSS file whenever its cache is purged, so we find it from the live page.
+// Self-hosted theme fonts are copied into public/ia-fonts because browsers
+// block cross-origin fonts that are served without CORS headers.
 import { mkdir, writeFile } from "fs/promises";
 
 const PAGE = process.env.IA_THEME_PAGE || "https://insideadviser.com.au/captivate-podcast/";
@@ -33,6 +35,19 @@ for (const href of hrefs) {
   );
   out += `\n/* ${href} */\n${fixed}\n`;
   console.log(`fetched ${href} (${css.length} bytes)`);
+}
+
+const fontUrls = [...new Set(
+  [...out.matchAll(/url\((['"]?)(https:\/\/insideadviser\.com\.au\/[^'")]+\.(?:woff2?|ttf|otf))\1\)/g)].map((m) => m[2])
+)];
+await mkdir("public/ia-fonts", { recursive: true });
+for (const url of fontUrls) {
+  const name = url.split("/").pop();
+  const res = await fetch(url, { headers: { "User-Agent": UA } });
+  if (!res.ok) throw new Error(`${url} returned ${res.status}`);
+  await writeFile(`public/ia-fonts/${name}`, Buffer.from(await res.arrayBuffer()));
+  out = out.split(url).join(`/ia-fonts/${name}`);
+  console.log(`fetched font ${name}`);
 }
 
 await mkdir("styles", { recursive: true });
