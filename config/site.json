@@ -1,9 +1,9 @@
 {
-  "siteName": "Inside Adviser Podcasts",
-  "parentName": "Inside Adviser",
+  "siteName": "The Inside Adviser Podcasts",
+  "parentName": "The Inside Adviser",
   "parentUrl": "https://insideadviser.com.au",
   "nav": [
-    { "label": "Inside Adviser", "href": "https://insideadviser.com.au" },
+    { "label": "The Inside Adviser", "href": "https://insideadviser.com.au" },
     { "label": "Podcasts", "href": "/" }
   ]
 }

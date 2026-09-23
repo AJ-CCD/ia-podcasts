@@ -35,6 +35,7 @@ export default function AdSlot({ name }: { name: SlotName }) {
       if (!slot) return;
       slot.defineSizeMapping(mapping).addService(gt.pubads());
       gt.pubads().setTargeting("site", "podcasts");
+      gt.pubads().setTargeting("UrlHost", window.location.hostname);
       gt.pubads().enableSingleRequest();
       gt.enableServices();
       gt.display(id);
