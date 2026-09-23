@@ -1,0 +1,31 @@
+name: Sync Inside Adviser theme
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 20 * * 1"
+  push:
+    paths:
+      - scripts/fetch-ia-theme.mjs
+      - .github/workflows/sync-ia-theme.yml
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/fetch-ia-theme.mjs
+      - name: Commit if changed
+        run: |
+          git add styles/ia-theme.css
+          if git diff --cached --quiet; then echo "No change"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync Inside Adviser theme CSS"
+          git push
