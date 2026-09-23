@@ -1,15 +1,25 @@
 {
   "network": "22551207209",
   "slots": {
-    "leaderboard": {
+    "billboard": {
       "path": "/22551207209/global_billboard_header",
-      "desktopSizes": [[728, 90], [970, 250]],
-      "mobileSizes": [[320, 50], [300, 250]]
+      "desktopSizes": [[970, 250]],
+      "mobileSizes": []
+    },
+    "leaderboard": {
+      "path": "/22551207209/home_leaderboard_community",
+      "desktopSizes": [[728, 90]],
+      "mobileSizes": []
+    },
+    "halfpage": {
+      "path": "/22551207209/home_halfpage_most_read",
+      "desktopSizes": [[300, 600]],
+      "mobileSizes": []
     },
     "mrec": {
       "path": "/22551207209/home_mrec_top_right",
       "desktopSizes": [[300, 250]],
-      "mobileSizes": [[300, 250]]
+      "mobileSizes": []
     }
   }
 }

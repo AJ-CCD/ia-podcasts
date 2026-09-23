@@ -2,8 +2,102 @@
   "siteName": "The Inside Adviser Podcasts",
   "parentName": "The Inside Adviser",
   "parentUrl": "https://insideadviser.com.au",
-  "nav": [
-    { "label": "The Inside Adviser", "href": "https://insideadviser.com.au" },
-    { "label": "Podcasts", "href": "/" }
+  "tagline": "Brilliant Investment Thinking by Advisers for Advisers.",
+  "assets": "https://insideadviser.com.au/wp-content/themes/the-inside-advisor/assets/images",
+  "search": "https://insideadviser.com.au/?s=",
+  "subscribe": "https://insideadviser.com.au/",
+  "menu": [
+    {
+      "label": "People",
+      "href": "https://insideadviser.com.au/topics/people/"
+    },
+    {
+      "label": "Investment",
+      "href": "https://insideadviser.com.au/topics/investment/"
+    },
+    {
+      "label": "Advice",
+      "href": "https://insideadviser.com.au/topics/advice/"
+    },
+    {
+      "label": "Practice Growth",
+      "href": "https://insideadviser.com.au/topics/practice-growth/"
+    },
+    {
+      "label": "In Focus",
+      "href": "https://insideadviser.com.au/topics/in-focus/"
+    },
+    {
+      "label": "Video",
+      "href": "https://insideadviser.com.au/topics/video/"
+    },
+    {
+      "label": "Podcast",
+      "href": "/",
+      "current": true
+    },
+    {
+      "label": "Community",
+      "href": "https://insideadviser.com.au/topics/community/"
+    },
+    {
+      "label": "Events",
+      "href": "https://www.theinside.network/events",
+      "external": true
+    }
+  ],
+  "about": [
+    {
+      "label": "About us",
+      "href": "https://insideadviser.com.au/about"
+    },
+    {
+      "label": "Media Kit",
+      "href": "http://theinside.network/s/Media-Kit",
+      "external": true
+    },
+    {
+      "label": "Contact",
+      "href": "https://insideadviser.com.au/contact"
+    }
+  ],
+  "network": [
+    {
+      "label": "The Inside Network",
+      "href": "https://www.theinside.network",
+      "logo": "logo-the-in.svg"
+    },
+    {
+      "label": "The Golden Times",
+      "href": "https://www.thegoldentimes.com.au/",
+      "logo": "logo-the-golden-times.svg"
+    },
+    {
+      "label": "Investor Strategy News",
+      "href": "https://ioandc.com/",
+      "logo": "logo-investor-strategy-news.svg"
+    },
+    {
+      "label": "Rask",
+      "href": "https://www.rask.com.au/",
+      "logo": "logo-rask.svg"
+    }
+  ],
+  "social": {
+    "youtube": "https://www.youtube.com/channel/UCSxXyXuXrLe_b1-Ah01mD4g",
+    "linkedin": "https://www.linkedin.com/showcase/the-inside-adviser/?originalSubdomain=au"
+  },
+  "about_text": "The Inside Adviser is a publication for financial advisers, accountants, brokers and money managers. It covers the world of advice and investing through news, analysis, profiles and in-depth analysis of the industry and its associated sectors.",
+  "copyright": "The Inside Network Pty Ltd",
+  "disclaimer": "The information on this website is for general information and news purposes only and is intended for professional financial advisers. No representation is given as to its accuracy or completeness. It is not intended as legal, financial or investment advice and should not be construed or relied on as such. While we will use reasonable efforts to include accurate and up-to-date information, we make no warranties as to its accuracy. Our full Terms of Use and Disclaimer are available here.",
+  "legal": [
+    {
+      "label": "Terms & Conditions",
+      "href": "https://insideadviser.com.au/terms-conditions/"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "https://insideadviser.com.au/privacy-policy"
+    }
   ]
 }

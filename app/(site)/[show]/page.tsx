@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import showsConfig from "@/config/shows.json";
 import { getShow } from "@/lib/feed";
-import EpisodeList from "@/components/EpisodeList";
-import AdSlot from "@/components/AdSlot";
+import ShowListing from "@/components/ShowListing";
 
 export const revalidate = 900;
 export const dynamicParams = true;
@@ -23,14 +22,5 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
 export default async function ShowPage({ params }: P) {
   const show = await getShow((await params).show);
   if (!show) notFound();
-  return (
-    <>
-      <AdSlot name="leaderboard" />
-      <section className="show-block">
-        <h1 className="show-title">{show.title}</h1>
-        {show.description && <p className="show-desc">{show.description}</p>}
-        <EpisodeList show={show} />
-      </section>
-    </>
-  );
+  return <ShowListing show={show} />;
 }

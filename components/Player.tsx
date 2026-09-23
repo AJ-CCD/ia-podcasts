@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { track } from "@/lib/track";
 
 type Props = {
   directUrl: string;
@@ -12,14 +13,6 @@ type Props = {
   spotify?: string;
 };
 
-declare global {
-  interface Window { dataLayer?: Record<string, unknown>[] }
-}
-
-const track = (event: string, data: Record<string, unknown>) => {
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ event, ...data });
-};
 
 const fmt = (s: number) => {
   if (!isFinite(s) || s < 0) s = 0;
