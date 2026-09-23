@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+<title>Inside Adviser Podcast</title>
+<description><![CDATA[<p>Conversations for Australian financial advisers.</p>]]></description>
+<itunes:image href="https://example.com/cover.jpg"/>
+<item>
+<title>Episode two: Portfolio construction in 2026</title>
+<guid isPermaLink="false">ep-2</guid>
+<pubDate>Tue, 22 Sep 2026 20:00:00 +0000</pubDate>
+<itunes:duration>00:32:10</itunes:duration>
+<content:encoded><![CDATA[<p>We discuss <a href="https://example.com">portfolios</a>.</p><script>alert(1)</script><iframe src="x"></iframe>]]></content:encoded>
+<enclosure url="https://podcasts.captivate.fm/media/abc/ep2.mp3" type="audio/mpeg" length="123"/>
+</item>
+<item>
+<title>Episode one: Welcome</title>
+<guid>ep-1</guid>
+<pubDate>Tue, 15 Sep 2026 20:00:00 +0000</pubDate>
+<itunes:duration>1930</itunes:duration>
+<description>Intro episode.</description>
+<enclosure url="https://podcasts.captivate.fm/media/abc/ep1.mp3" type="audio/mpeg" length="123"/>
+</item>
+</channel>
+</rss>

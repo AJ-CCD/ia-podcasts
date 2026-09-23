@@ -1,0 +1,15 @@
+{
+  "network": "22551207209",
+  "slots": {
+    "leaderboard": {
+      "path": "",
+      "desktopSizes": [[728, 90], [970, 250]],
+      "mobileSizes": [[320, 50], [300, 250]]
+    },
+    "mrec": {
+      "path": "",
+      "desktopSizes": [[300, 250]],
+      "mobileSizes": [[300, 250]]
+    }
+  }
+}
